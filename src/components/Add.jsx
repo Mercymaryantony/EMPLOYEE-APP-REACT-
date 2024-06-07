@@ -35,6 +35,9 @@ const Add = () => {
                             <label htmlFor="" className="form-label">CONFIRM PASSWORD</label>
                             <input type="password" name="" id="" className="form-control" />
                         </div>
+                        <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                           <button className="btn btn-primary">ADD</button>
+                        </div>
                     </div>
                 </div>
             </div>
