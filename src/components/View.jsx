@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './Navbar'
 
 const View = () => {
+    const [data,changedata]=useState(
+        [
+            {"NAME":"MARK","CODE":"M1205","ADD":"IJK"},
+            {"NAME":"MIKE","CODE":"M1205","ADD":"ERK"},
+            {"NAME":"JACOB","CODE":"M1205","ADD":"IJK"},
+            {"NAME":"JOHAN","CODE":"M1205","ADD":"ERK"},
+            {"NAME":"ORNALD","CODE":"M1205","ADD":"IJK"},
+            {"NAME":"MIKE","CODE":"M1205","ADD":"ERK"},
+            {"NAME":"OTTO","CODE":"M1205","ADD":"IJK"}
+        ]
+    )
     return (
         <div>
             <Navbar/>
@@ -17,54 +28,20 @@ const View = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">MARK</th>
-                                    <td>M1250</td>
-                                    <td>IJK</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th scope="row">OTTO</th>
-                                    <td>O1541</td>
-                                    <td>ERK</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th scope="row">MICHEAL</th>
-                                    <td>M1250</td>
-                                    <td>IJK</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th scope="row">ORNALD</th>
-                                    <td>O1541</td>
-                                    <td>ERK</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th scope="row">JACOB</th>
-                                    <td>M1250</td>
-                                    <td>IJK</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th scope="row">THORTON</th>
-                                    <td>O1541</td>
-                                    <td>ERK</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th scope="row">MIKE</th>
-                                    <td>M1250</td>
-                                    <td>IJK</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th scope="row">ORWELL</th>
-                                    <td>O1541</td>
-                                    <td>ERK</td>
-                                    
-                                </tr>
+                                {data.map(
+                                    (value,i) =>
+                                        {
+                                            return <tr>
+                                            <th scope="row">{value.NAME}</th>
+                                            <td>{value.CODE}</td>
+                                            <td>{value.ADD}</td>
+                                            
+                                        </tr>
+                                        }
+                                )
+
+                                }
+                           
                             </tbody>
                         </table>
                     </div>
